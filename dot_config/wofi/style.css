@@ -1,0 +1,15 @@
+window {
+	margin: 0px;
+	border: 2px solid #0c0c0c;
+	background-color: #0a0a0a;
+	font-family: "Fira Code";
+	font-weight: 900;
+	font-size: 15;
+}
+#entry:selected {
+	background-color: #444;
+}
+
+#text {
+	color: #d0d0d0;
+}
