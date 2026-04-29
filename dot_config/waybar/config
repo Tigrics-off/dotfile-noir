@@ -3,8 +3,8 @@
     "position": "top",
     "height": 30,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "pulseaudio", "tray"],
+    "modules-center": ["cpu", "clock", "memory"],
+    "modules-right": ["hyprland/language", "network", "pulseaudio", "tray"],
 
     "hyprland/workspaces": {
         "format": "{id}",
@@ -22,5 +22,17 @@
         "min": 0,
         "max": 100,
         "orientation": "horizontal"
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+
+    "network": {
+        "interval": 1,
+        "format-wifi": "{bandwidthDownBytes}",
+        "format-ethernet": "{bandwidthDownBytes}",
+        "format-disconnected": "no con"
     }
 }
