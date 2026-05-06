@@ -38,13 +38,7 @@
     
     "custom/power": {
         "format": "pow",
-        "on-click": "waybar-signal 1",
-        "menu": "on-click",
-        "menu-actions": {
-            "shutdown": "shutdown now",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "logout": "pkill -u $USER"
-        }
+        "on-click": "~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false
     }
 }
