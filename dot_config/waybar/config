@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["cpu", "clock", "memory"],
-    "modules-right": ["hyprland/language", "network", "pulseaudio", "tray"],
+    "modules-right": ["hyprland/language", "network", "pulseaudio", "tray", "custom/power"],
 
     "hyprland/workspaces": {
         "format": "{id}",
@@ -16,8 +16,8 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
-    "cpu": { "format": "CPU: {usage}%" },
-    "memory": { "format": "MEM: {percentage}%" },
+    "cpu": { "format": "cpu: {usage}%" },
+    "memory": { "format": "mem: {percentage}%" },
     "pulseaudio-slider": {
         "min": 0,
         "max": 100,
@@ -34,5 +34,16 @@
         "format-wifi": "{bandwidthDownBytes}",
         "format-ethernet": "{bandwidthDownBytes}",
         "format-disconnected": "no con"
+    },
+   "custom/power": {
+    "format": "{icon}",
+    "format-icons": "pow",
+    "on-click": "waybar-signal 1",
+    "menu": "on-click",
+    "menu-actions": {
+        "shutdown": "shutdown now",
+        "reboot": "reboot",
+        "suspend": "systemctl suspend",
+        "logout": "pkill -u $USER"
     }
 }
