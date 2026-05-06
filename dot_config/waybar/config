@@ -35,15 +35,16 @@
         "format-ethernet": "{bandwidthDownBytes}",
         "format-disconnected": "no con"
     },
-   "custom/power": {
-    "format": "{icon}",
-    "format-icons": "pow",
-    "on-click": "waybar-signal 1",
-    "menu": "on-click",
-    "menu-actions": {
-        "shutdown": "shutdown now",
-        "reboot": "reboot",
-        "suspend": "systemctl suspend",
-        "logout": "pkill -u $USER"
+    
+    "custom/power": {
+        "format": "pow",
+        "on-click": "waybar-signal 1",
+        "menu": "on-click",
+        "menu-actions": {
+            "shutdown": "shutdown now",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "logout": "pkill -u $USER"
+        }
     }
 }
